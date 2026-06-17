@@ -22,7 +22,7 @@ mysql = MySQL(app)
 
 # S3 Configuration — credentials come from EC2 IAM role automatically
 S3_BUCKET = os.getenv('S3_BUCKET')
-AWS_REGION = os.getenv('AWS_REGION', 'ap-south-1')
+AWS_REGION = os.getenv('AWS_REGION', 'ap-south-2')
 s3 = boto3.client('s3', region_name=AWS_REGION)
 
 ALLOWED_IMAGE_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
